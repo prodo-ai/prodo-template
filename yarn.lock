@@ -952,18 +952,18 @@
     "@parcel/utils" "^1.11.0"
     physical-cpu-count "^2.0.0"
 
-"@prodo/babel-plugin@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@prodo/babel-plugin/-/babel-plugin-0.0.1.tgz#689c3767f9497defc5d7375599b75d4ae621e859"
-  integrity sha512-i/G67n/3cQxywfLL3jFDH4IhhrjPTOa+nw0QWYUd6d7J5zU3t1GK4iJn14Irf7wV+nV6BY9F7EInCq4R8mVRNQ==
+"@prodo/babel-plugin@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@prodo/babel-plugin/-/babel-plugin-0.0.3.tgz#ab7f60d823a2cac86d463f6005d2519dd9f350f8"
+  integrity sha512-ZO6MNKukt6hNcKMCTTwsX85sk/fY5TPEAeqml5E67TTwDyLXQ0+bI3o98nQX9RI6kSy9hYWfIbmtkMv0PtNqyg==
   dependencies:
     "@babel/core" "^7.5.5"
     "@babel/types" "^7.5.5"
 
-"@prodo/core@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@prodo/core/-/core-0.0.1.tgz#932f935782ea630654b55490d895c64365a82884"
-  integrity sha512-thxKuoy7FRxKm8XIzb/Ho8yZ6xppHF/XAQPeFrBw15rxn2NPBql8vQwQHNF6Oq96eQh8MXawAucXojlmArWjLQ==
+"@prodo/core@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@prodo/core/-/core-0.0.3.tgz#79b25fdb9daeb8602c3ad3457998762e27e130ec"
+  integrity sha512-rqeakRqDC5DYFjLQUl+aJoXOsXNn/F6yxAhqUsZEn3Ra88oLaJ+xFJVBsSecd59+iLwqaGsar0JmEYAxtzNBHQ==
   dependencies:
     immer "^3.2.0"
     react "^16.9.0"
