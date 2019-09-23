@@ -5,13 +5,14 @@ import { model } from "./model";
 
 import "./styles.css";
 
-const { store, Provider } = model.createStore({
-  initState: {}
+const { Provider } = model.createStore({
+  logger: true,
+  initState: {},
 });
 
 ReactDOM.render(
   <Provider>
     <App />
   </Provider>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );

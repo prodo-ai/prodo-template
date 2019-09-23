@@ -749,6 +749,11 @@
     react "^16.9.0"
     react-dom "^16.9.0"
 
+"@prodo/logger@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@prodo/logger/-/logger-0.0.6.tgz#7f1b03db382288ee0761d952d740ba118c270537"
+  integrity sha512-rSL6ohWNTY6l7oFwMAia5dCWz9pPaMaIsWntcW3XyHQh2Vbixfnyu1tRS7iinBqTXoB2KIgupxyqLxxF7TJGoA==
+
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
