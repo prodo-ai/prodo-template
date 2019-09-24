@@ -10,9 +10,19 @@ const { Provider } = model.createStore({
   initState: {},
 });
 
-ReactDOM.render(
-  <Provider>
-    <App />
-  </Provider>,
-  document.getElementById("root"),
-);
+const render = () => {
+  ReactDOM.render(
+    <Provider>
+      <App />
+    </Provider>,
+    document.getElementById("root"),
+  );
+};
+
+if (module.hot) {
+  module.hot.accept("./App", () => {
+    render();
+  });
+}
+
+render();
