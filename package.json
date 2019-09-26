@@ -6,9 +6,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "rm -rf .cache build dist lib tsconfig.tsbuildinfo",
+    "clean": "rimraf .cache build dist lib tsconfig.tsbuildinfo",
     "test": "jest",
-    "start": "webpack-dev-server --config webpack.config.js --mode=development --history-api-fallback --hot"
+    "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --mode=development --history-api-fallback --hot",
+    "build": "rimraf dist && NODE_ENV=production webpack -p"
   },
   "dependencies": {
     "@prodo/core": "^0.0.7",
@@ -34,16 +35,35 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "4.0.0-beta.5",
     "jest": "^24.9.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-normalize": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "rimraf": "^3.0.0",
     "sass-loader": "^8.0.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.0",
+    "terser-webpack-plugin": "^2.1.0",
     "typescript": "^3.6.3",
     "webpack": "^4.40.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.8.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "jest": {
     "transform": {
