@@ -8,8 +8,21 @@ const webpack = require("webpack");
 
 const APP_PATH = path.resolve(__dirname, "src");
 
-const isDevelopment = process.env.NODE_ENV === "development";
 const isProduction = process.env.NODE_ENV === "production";
+
+const devConfig = {
+  srcmap: true,
+  asyncTypeChecking: true,
+};
+
+const prodConfig = {
+  autoprefixer: true,
+  minimize: true,
+  extractCss: true,
+  useHashInFilename: true,
+};
+
+const config = isProduction ? prodConfig : devConfig;
 
 const styleLoaders = {
   test: /\.s?css$/,
@@ -25,9 +38,11 @@ const styleLoaders = {
       options: {
         plugins: () => [
           require("postcss-preset-env")({
-            autoprefixer: {
-              flexbox: "no-2009",
-            },
+            autoprefixer: config.autoprefixer
+              ? {
+                  flexbox: "no-2009",
+                }
+              : false,
             stage: 3,
           }),
           require("postcss-normalize")(),
@@ -39,17 +54,17 @@ const styleLoaders = {
 
 module.exports = {
   entry: APP_PATH,
-  mode: isProduction ? "production" : isDevelopment && "development",
+  mode: isProduction ? "production" : "development",
   bail: isProduction,
-  devtool: isDevelopment ? "source-map" : false,
+  devtool: config.srcmap ? "source-map" : false,
   stats: "minimal",
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: isProduction ? "[name].[hash].js" : "bundle.js",
-    chunkFilename: isProduction
+    filename: config.useHashInFilename ? "[name].[hash].js" : "bundle.js",
+    chunkFilename: config.useHashInFilename
       ? "[name].[hash].chunk.js"
-      : isDevelopment && "[name].chunk.js",
+      : "[name].chunk.js",
     publicPath: "/",
   },
 
@@ -58,7 +73,7 @@ module.exports = {
   },
 
   optimization: {
-    minimize: isProduction,
+    minimize: config.minimize,
     minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
     splitChunks: {
       chunks: "all",
@@ -82,37 +97,32 @@ module.exports = {
   },
 
   plugins: [
-    new HtmlWebpackPlugin(
-      Object.assign(
-        {},
-        {
-          inject: true,
-          template: path.join(APP_PATH, "index.html"),
-        },
-        isProduction
-          ? {
-              minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeRedundantAttributes: true,
-                useShortDoctype: true,
-                removeEmptyAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                keepClosingSlash: true,
-                minifyJS: true,
-                minifyCSS: true,
-                minifyURLs: true,
-              },
-            }
-          : undefined,
-      ),
-    ),
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: path.join(APP_PATH, "index.html"),
+      ...(config.minimize
+        ? {
+            minify: {
+              removeComments: true,
+              collapseWhitespace: true,
+              removeRedundantAttributes: true,
+              useShortDoctype: true,
+              removeEmptyAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              keepClosingSlash: true,
+              minifyJS: true,
+              minifyCSS: true,
+              minifyURLs: true,
+            },
+          }
+        : {}),
+    }),
     isProduction &&
       new MiniCssExtractPlugin({
         filename: "[name].[contenthash:8].css",
       }),
     new ForkTsCheckerWebpackPlugin({
-      async: isDevelopment,
+      async: config.asyncTypeChecking,
       useTypescriptIncrementalApi: true,
     }),
   ].filter(Boolean),
