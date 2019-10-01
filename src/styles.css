@@ -14,7 +14,7 @@ body {
 }
 
 a {
-  color: mediumslateblue;
+  color: #00E3A0;
   transition: opacity 150ms ease-in-out;
 
   &:hover {

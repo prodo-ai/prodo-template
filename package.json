@@ -6,10 +6,10 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "rimraf .cache build dist lib tsconfig.tsbuildinfo",
-    "test": "jest",
     "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --mode=development --history-api-fallback --hot",
-    "build": "rimraf dist && NODE_ENV=production webpack -p"
+    "build": "rimraf dist && NODE_ENV=production webpack -p",
+    "clean": "rimraf .cache build dist lib tsconfig.tsbuildinfo",
+    "test": "jest"
   },
   "dependencies": {
     "@prodo/core": "^0.0.9",
@@ -36,6 +36,7 @@
     "@types/webpack-env": "^1.14.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "html-webpack-plugin": "4.0.0-beta.5",
