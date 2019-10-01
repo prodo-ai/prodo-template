@@ -10,7 +10,7 @@ const Counter = () => (
     <h1 className="count" data-testid="counter">
       {watch(state.count)}
     </h1>
-    <button onClick={() => dispatch(actions.changeCount)(1)}>+</button>{" "}
+    <button onClick={() => dispatch(actions.changeCount)(1)}>+</button>
   </div>
 );
 

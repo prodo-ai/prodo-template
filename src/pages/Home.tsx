@@ -6,7 +6,11 @@ const Home = () => (
   <div>
     <h1>Home</h1>
     <p>
-      This is the home page. <Link to="about">Go to About</Link>.
+      This is the home page.{" "}
+      <Link to="about" data-testid="link-about">
+        Go to About
+      </Link>
+      .
     </p>
 
     <p>This is a counter</p>
