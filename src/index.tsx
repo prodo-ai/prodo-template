@@ -13,7 +13,9 @@ const { Provider } = model.createStore({
   route: {
     history,
   },
-  initState: {},
+  initState: {
+    count: 0,
+  },
 });
 
 const render = () => {
