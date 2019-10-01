@@ -1,7 +1,12 @@
 import * as React from "react";
 
 const Home = () => (
-  <div>
+  <div className="home">
+    <img
+      className="logo"
+      alt="Prodo logo"
+      src="https://prodo.dev/static/logo.svg"
+    />
     <a
       href="https://docs.prodo.dev/introduction/getting-started"
       target="_blank"

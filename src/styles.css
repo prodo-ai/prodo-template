@@ -29,6 +29,11 @@ a {
   padding: 0 1rem;
 }
 
-em {
-  color: mediumslateblue;
+.home {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 20rem;
 }
