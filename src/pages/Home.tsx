@@ -1,20 +1,16 @@
 import * as React from "react";
-import { Link } from "@prodo/route";
-import Counter from "../components/Counter";
 
 const Home = () => (
   <div>
-    <h1>Home</h1>
-    <p>
-      This is the home page.{" "}
-      <Link to="about" data-testid="link-about">
-        Go to About
-      </Link>
-      .
-    </p>
-
-    <p>This is a counter</p>
-    <Counter />
+    <a
+      href="https://docs.prodo.dev/introduction/getting-started"
+      target="_blank"
+    >
+      <h1>Learn Prodo</h1>
+    </a>
+    <h3>
+      Edit <em>src/pages/Home.tsx</em> and save to reload.
+    </h3>
   </div>
 );
 
