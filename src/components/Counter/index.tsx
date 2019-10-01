@@ -1,6 +1,8 @@
 import * as React from "react";
-import { state, watch, dispatch } from "../model";
-import * as actions from "../actions";
+import { state, watch, dispatch } from "../../model";
+import * as actions from "../../actions";
+
+import "./styles.scss";
 
 const Counter = () => (
   <div className="counter">

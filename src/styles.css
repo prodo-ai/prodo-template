@@ -13,45 +13,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  padding: 1rem 1rem;
-  background-color: #00E3A0;
-  font-size: 1.5em;
-  font-weight: bold;
-
-  a {
-    color: inherit;
-    text-decoration: inherit;
-  }
-}
-
 .container {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.counter {
-  display: flex;
-  align-items: center;
-
-  .count {
-    min-width: 100px;
-    display: flex;
-    justify-content: center;
-    padding: 0 2rem;
-    margin: 0;
-  }
-
-  button {
-    appearance: none;
-    border: none;
-    height: 4rem;
-    width: 4rem;
-    background-color: transparent;
-    border: solid 4px #333;
-    font-weight: bold;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-}
