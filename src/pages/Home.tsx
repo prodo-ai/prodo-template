@@ -11,7 +11,7 @@ const Home = () => (
       href="https://docs.prodo.dev/introduction/getting-started"
       target="_blank"
     >
-      <h1>Learn Prodo</h1>
+      <h1>Get started with Prodo</h1>
     </a>
     <h3>
       Edit <em>src/pages/Home.tsx</em> and save to reload.
