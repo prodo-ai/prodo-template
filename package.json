@@ -38,6 +38,7 @@
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "html-webpack-plugin": "4.0.0-beta.5",
     "identity-obj-proxy": "^3.0.0",
@@ -75,7 +76,7 @@
       "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
     },
     "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/__mocks__/fileMock.js",
       "\\.(css|scss)$": "identity-obj-proxy"
     }
   }
