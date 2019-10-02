@@ -2,15 +2,21 @@ import { render } from "@testing-library/react";
 import * as React from "react";
 import App from "../src/App";
 import { model } from "../src/model";
+import { createMemoryHistory } from "history";
 
-test("can render App without crashing", async () => {
-  const { Provider } = model.createStore({ initState: {} });
+describe("App", () => {
+  it("can render App without crashing", async () => {
+    const { Provider } = model.createStore({
+      route: {
+        history: createMemoryHistory(),
+      },
+      initState: {},
+    });
 
-  const { container } = render(
-    <Provider>
-      <App />
-    </Provider>,
-  );
-
-  expect(container.textContent).toBe("Hello World");
+    render(
+      <Provider>
+        <App />
+      </Provider>,
+    );
+  });
 });

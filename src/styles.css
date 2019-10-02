@@ -12,3 +12,28 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  color: #00E3A0;
+  transition: opacity 150ms ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.home {
+  padding-top: 4rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 20rem;
+}

@@ -6,15 +6,17 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "clean": "rimraf .cache build dist lib tsconfig.tsbuildinfo",
-    "test": "jest",
     "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --mode=development --history-api-fallback --hot",
-    "build": "rimraf dist && NODE_ENV=production webpack -p"
+    "build": "rimraf dist && NODE_ENV=production webpack -p",
+    "clean": "rimraf .cache build dist lib tsconfig.tsbuildinfo",
+    "test": "jest"
   },
   "dependencies": {
     "@prodo/core": "^0.0.9",
     "@prodo/logger": "^0.0.9",
+    "@prodo/route": "^0.0.11",
     "core-js": "2",
+    "history": "^4.10.1",
     "react": "^16.8.6",
     "react-dom": "^16.9.0"
   },
@@ -25,6 +27,7 @@
     "@babel/preset-typescript": "^7.6.0",
     "@prodo/babel-plugin": "^0.0.9",
     "@testing-library/react": "^9.1.4",
+    "@types/history": "^4.7.3",
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.2",
     "@types/react": "^16.8.25",
@@ -33,6 +36,7 @@
     "@types/webpack-env": "^1.14.0",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.2.0",
     "fork-ts-checker-webpack-plugin": "^1.5.0",
     "html-webpack-plugin": "4.0.0-beta.5",
