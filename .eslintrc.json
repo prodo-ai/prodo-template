@@ -5,7 +5,8 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "prettier",
     "prettier/@typescript-eslint",
-    "prettier/react"
+    "prettier/react",
+    "plugin:@prodo/recommended"
   ],
   "env": {
     "browser": true,
@@ -19,5 +20,5 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"]
+  "plugins": ["react", "@typescript-eslint", "@prodo/eslint-plugin"]
 }

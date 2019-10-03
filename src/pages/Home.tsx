@@ -7,6 +7,7 @@ const Home = () => (
     <a
       href="https://docs.prodo.dev/introduction/getting-started"
       target="_blank"
+      rel="noopener noreferrer"
     >
       <h1>Get started with Prodo</h1>
     </a>

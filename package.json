@@ -26,6 +26,7 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.6.0",
     "@prodo/babel-plugin": "^0.1.0",
+    "@prodo/eslint-plugin": "^0.1.1",
     "@testing-library/react": "^9.1.4",
     "@types/history": "^4.7.3",
     "@types/jest": "^24.0.18",

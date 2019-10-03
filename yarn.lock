@@ -929,6 +929,13 @@
     react "^16.9.0"
     react-dom "^16.9.0"
 
+"@prodo/eslint-plugin@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@prodo/eslint-plugin/-/eslint-plugin-0.1.1.tgz#b92ed16e08e0dbecc3ef310885c0c616d594e470"
+  integrity sha512-WpNFL6qL4ygj3YfR6kDMAv4TBhXBJYm9MlpgpFMg1bzIe0+brDtPHf7feFRyLPpar/jSIuBdNNh5unefnaxoSw==
+  dependencies:
+    "@typescript-eslint/typescript-estree" "^2.1.0"
+
 "@prodo/logger@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@prodo/logger/-/logger-0.1.0.tgz#91d55263742e5567e736f81b8e58ee22554a9b25"
@@ -1165,7 +1172,7 @@
     "@typescript-eslint/typescript-estree" "2.3.2"
     eslint-visitor-keys "^1.1.0"
 
-"@typescript-eslint/typescript-estree@2.3.2":
+"@typescript-eslint/typescript-estree@2.3.2", "@typescript-eslint/typescript-estree@^2.1.0":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/typescript-estree/-/typescript-estree-2.3.2.tgz#107414aa04e689fe6f7251eb63fb500217f2b7f4"
   integrity sha512-eZNEAai16nwyhIVIEaWQlaUgAU3S9CkQ58qvK0+3IuSdLJD3W1PNuehQFMIhW/mTP1oFR9GNoTcLg7gtXz6lzA==
