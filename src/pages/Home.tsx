@@ -1,12 +1,9 @@
 import * as React from "react";
+import logo from "../logo.svg";
 
 const Home = () => (
   <div className="home">
-    <img
-      className="logo"
-      alt="Prodo logo"
-      src="https://prodo.dev/static/logo.svg"
-    />
+    <img className="logo" alt="Prodo logo" src={logo} />
     <a
       href="https://docs.prodo.dev/introduction/getting-started"
       target="_blank"
