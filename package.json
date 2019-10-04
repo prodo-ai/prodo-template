@@ -8,6 +8,7 @@
   "scripts": {
     "start": "NODE_ENV=development webpack-dev-server --config webpack.config.js --mode=development --history-api-fallback --hot",
     "build": "rimraf dist && NODE_ENV=production webpack -p",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "clean": "rimraf .cache build dist lib tsconfig.tsbuildinfo",
     "test": "jest"
   },
