@@ -5,7 +5,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const path = require("path");
-const webpack = require("webpack");
 
 const APP_PATH = path.resolve(__dirname, "src");
 const PUBLIC_PATH = path.resolve(__dirname, "public");
@@ -23,6 +22,7 @@ const prodConfig = {
   minimize: true,
   extractCss: true,
   useHashInFilename: true,
+  failOnError: true,
 };
 
 const config = isProduction ? prodConfig : devConfig;
@@ -90,6 +90,15 @@ module.exports = {
 
   module: {
     rules: [
+      {
+        enforce: "pre",
+        test: /\.(ts|js)x?$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader",
+        options: {
+          failOnError: true,
+        },
+      },
       {
         test: /\.(ts|js)x?$/,
         use: ["babel-loader", "source-map-loader"],
